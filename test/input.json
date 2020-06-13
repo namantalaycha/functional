@@ -1,0 +1,54 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/books",
+      "headers": [
+        {
+          "key": "name",
+          "value":"trj"
+        },
+        {
+          "key": "123",
+          "value": "gkc"
+        },
+        {
+          "key": "class",
+          "value": "dtftsj",
+          "dummy": "sdsgsb"
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/books",
+      "headers": [
+        {
+          "key": "name",
+          "value": "naman",
+          "dummy": "sdsgsb"
+        },
+        {
+          "key": "name",
+          "value": "uykf",
+          "dummy": "sdsgsb"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/books/1",
+      "headers": [
+        { "key": "name",
+          "value": "sg",
+          "dummy": "sdsgsb"
+        },
+        {
+          "key": "class",
+          "value": "oug",
+          "dummy": "sdsgsb"
+        }
+      ]
+    }
+  ]
+}
