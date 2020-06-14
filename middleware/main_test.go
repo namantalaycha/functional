@@ -20,7 +20,7 @@ func TestAuthNil(t *testing.T) {
 	handler.ServeHTTP(rr, req)
 
 	assert.Equal(t,rr.StatusCode, http.StatusUnauthorized)
-	assert.Equal(t,"naman", "naman")
+	assert.Equal(t,"naman", "nama")
 }
 
 func BenchmarkAuth(b *testing.B) {
