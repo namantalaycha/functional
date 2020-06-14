@@ -25,10 +25,10 @@ type Header struct {
 	Value string `json:"value"`
 }
 
-func TestApp(t *testing.T) {
+var schema = "file:///home/naman/go/src/github.com/namantalaycha/functional/test/schema.json"
+var input = "file:///home/naman/go/src/github.com/namantalaycha/functional/test/input.json"
 
-	schema := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/schema.json"
-	input := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/input.json"
+func TestApp(t *testing.T) {
 
 	if !jsonschema.Validate(input, schema) {
 		t.FailNow()
@@ -45,6 +45,7 @@ func TestApp(t *testing.T) {
 	}
 
 	for _, route := range routes.RouteNodes {
+
 		req, err := http.NewRequest(route.Method, "http://localhost:3000"+route.Path, nil)
 		if err != nil {
 			fmt.Println(err)
@@ -62,9 +63,6 @@ func TestApp(t *testing.T) {
 
 func BenchmarkApp(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-
-		schema := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/schema.json"
-		input := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/input.json"
 
 		if !jsonschema.Validate(input, schema) {
 			b.FailNow()

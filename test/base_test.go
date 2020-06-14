@@ -7,7 +7,6 @@ import (
 )
 
 func TestMain(m *testing.M) {
-
 	go app.Startapp()
 	os.Exit(m.Run())
 }
