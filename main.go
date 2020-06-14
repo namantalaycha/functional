@@ -1,6 +1,6 @@
 package main
 
-import "functional/app"
+import "github.com/namantalaycha/functional/app"
 
 func main(){
 app.Startapp()

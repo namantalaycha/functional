@@ -27,8 +27,8 @@ type Header struct {
 
 func TestApp(t *testing.T) {
 
-	schema := "file://C:/Users/naman/go/src/functional/test/schema.json"
-	input := "file://C:/Users/naman/go/src/functional/test/input.json"
+	schema := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/schema.json"
+	input := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/input.json"
 
 	if !jsonschema.Validate(input, schema) {
 		t.FailNow()
@@ -62,8 +62,9 @@ func TestApp(t *testing.T) {
 
 func BenchmarkApp(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		schema := "file://C:/Users/naman/go/src/functional/test/schema.json"
-		input := "file://C:/Users/naman/go/src/functional/test/input.json"
+
+		schema := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/schema.json"
+		input := "file:///home/naman/go/src/github.com/namantalaycha/functional/test/input.json"
 
 		if !jsonschema.Validate(input, schema) {
 			b.FailNow()

@@ -2,9 +2,9 @@ package app
 
 import (
 	"fmt"
-	"functional/middleware"
-	"functional/service"
 	"github.com/go-chi/chi"
+	"github.com/namantalaycha/functional/middleware"
+	"github.com/namantalaycha/functional/service"
 	"net/http"
 )
 

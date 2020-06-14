@@ -1,9 +1,9 @@
 package middleware
 
 import (
+	"github.com/namantalaycha/middletest/assert"
 	"github.com/namantalaycha/middletest/middleware"
 	"github.com/namantalaycha/middletest/mocks"
-
 	"net/http"
 	"testing"
 )
@@ -19,7 +19,8 @@ func TestAuthNil(t *testing.T) {
 	handler := Auth(middleware.TestHandler)
 	handler.ServeHTTP(rr, req)
 
-	//assert.Equal(t,rr.StatusCode, http.StatusOK)
+	assert.Equal(t,rr.StatusCode, http.StatusUnauthorized)
+	assert.Equal(t,"naman", "naman")
 }
 
 func BenchmarkAuth(b *testing.B) {

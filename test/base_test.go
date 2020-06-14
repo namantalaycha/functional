@@ -1,7 +1,7 @@
 package test
 
 import (
-	"functional/app"
+	"github.com/namantalaycha/functional/app"
 	"os"
 	"testing"
 )
