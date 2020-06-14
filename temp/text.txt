@@ -1,0 +1,4 @@
+--- FAIL: TestAuthNil (0.00s)
+FAIL
+FAIL	github.com/namantalaycha/functional/middleware	0.003s
+FAIL
