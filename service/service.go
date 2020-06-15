@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strconv"
 )
+
 type Book struct {
 	ID     string  `json:"id"`
 	Isbn   string  `json:"isbn"`
@@ -22,17 +23,14 @@ type Author struct {
 
 var Books []Book
 
-
-
 func GetBooks(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(Books)
-    fmt.Println("hello")
 }
 
 func GetBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	params :=  chi.URLParam(r, "id")
+	params := chi.URLParam(r, "id")
 
 	for _, item := range Books {
 		if item.ID == params {
@@ -40,9 +38,8 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-	fmt.Fprintf(w,"No Match Found!")
+	fmt.Fprintf(w, "No Match Found!")
 }
-
 
 func CreateBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
@@ -51,6 +48,6 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 	book.ID = strconv.Itoa(rand.Intn(10000))
 	Books = append(Books, book)
 	json.NewEncoder(w).Encode(book)
-	fmt.Fprintf(w,"book is created")
+	fmt.Fprintf(w, "book is created")
 
 }
