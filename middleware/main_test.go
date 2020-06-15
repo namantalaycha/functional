@@ -79,6 +79,6 @@ func BenchmarkAuth(b *testing.B) {
 		} else {
 			assert.Equalb(b, rr.StatusCode, http.StatusOK)
 		}
-		assert.Equalb(b, "naman", "naman")
+		assert.Equalb(b, "naman", "nan")
 	}
 }
