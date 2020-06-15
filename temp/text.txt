@@ -1,1 +1,7 @@
-ok  	github.com/namantalaycha/functional/middleware	0.003s
+goos: linux
+goarch: amd64
+pkg: github.com/namantalaycha/functional/middleware
+BenchmarkAuth-6   	  878242	      1443 ns/op
+PASS
+ok  	github.com/namantalaycha/functional/middleware	2.165s
+ok  	github.com/namantalaycha/functional/middleware	(cached)
