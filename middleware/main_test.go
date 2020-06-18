@@ -26,6 +26,7 @@ func TestAuthNil(t *testing.T) {
 	}
 }
 
+
 func BenchmarkAuth(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		req, err := http.NewRequest(http.MethodPost, "/books", nil)
