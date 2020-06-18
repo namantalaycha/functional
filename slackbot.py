@@ -1,6 +1,6 @@
 import sys
 from slacker import Slacker
-slack = Slacker('xoxb-1194530660337-1206300796208-rzhUNlRtwNXD0DwbCRxfaamM')
+slack = Slacker('xoxb-1194530660337-1206300796208-YCbhCI0f0m8762C2AzC11gEt')
 f = open("temp/text.txt", "r")
 message= f.read()
 
