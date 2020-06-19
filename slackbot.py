@@ -1,6 +1,7 @@
 import sys
 from slacker import Slacker
-slack = Slacker('xoxb-1194530660337-1206300796208-To4noH0m82VZaauXLoLTixuy')
+aoi_token = input("Enter your API TOKEN")
+slack = Slacker('aoi_token')
 f = open("temp/text.txt", "r")
 message= f.read()
 
