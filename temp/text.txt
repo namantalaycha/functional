@@ -1,0 +1,16 @@
+result of Testing:
+ok  	github.com/namantalaycha/functional/middleware	(cached)
+result of Benchmarks :
+goos: linux
+goarch: amd64
+pkg: github.com/namantalaycha/functional/middleware
+BenchmarkAuth-6   	  599881	      1847 ns/op
+PASS
+ok  	github.com/namantalaycha/functional/middleware	1.136s
+result of Functional Testing:
+ok  	github.com/namantalaycha/functional/test	(cached)
+result of Functional Benchmarks :
+goos: linux
+goarch: amd64
+pkg: github.com/namantalaycha/functional/test
+BenchmarkApp-6   	
